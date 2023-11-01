@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* Reset */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+nav {
+	padding: 40px 0;
+    position: fixed;
+    background-color: rgb(46, 46, 46);
+    width: 100%;
+	border-radius: 20px 0;
+	margin-top: 5px;
+}
+
+span#logo {
+    /* margin-left: 50px; */
+    color: white;
+    font: bold;
+    font-size: 18pt;
+	display: none;
+    /* line-height: 60px; */
+}
+
+.logo {
+    /* margin-left: 50px; */
+    color: white;
+    font: bold;
+    font-size: 18pt;
+    /* line-height: 60px; */
+}
+
+nav ul {
+    display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+nav ul li {
+    text-align: center;
+    width: 120px;
+    font-size: 12pt;
+    /* margin-right: -4px; */
+	/* margin-top: 25px; */
+    /* height: 60px; */
+    /* line-height: 40px; */
+    /* padding: 10px; */
+    display: inline-block;
+    transition: all 0.1s;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    background-color: rgb(185, 38, 67);
+}
+
+
+nav ul li a {
+    color: white;
+}
+
+
+#navbtt {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    float: right;
+    /* padding: 11px 16px 0px 20px; */
+}
+
+#check {
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+    #navbtt {
+        display: block;
+    }
+span#logo {
+    margin-left: 15px;
+	margin-top: 15px;
+	display:inline-block;
+    /* line-height: 60px; */
+}
+
+.logo {
+	display: none;
+}
+
+    nav ul {
+		/* float: right; */
+		display: flex;
+		flex-direction: column;
+        left: 200%;
+        transition: all 0.4s;
+        background-color: rgb(46, 46, 46);
+        top: 59px;
+        text-align: center;
+        position: fixed;
+        width: 70%;
+        height: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        display: block;
+    }
+    nav ul li a {
+        font-size: 14pt;
+    }
+    #check:checked ~ ul {
+        left: 30%;
+    }
+}
